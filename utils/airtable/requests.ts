@@ -70,9 +70,6 @@ export async function findContact(senderRef: string): Promise<ContactRecord> {
   return { ...contact, image };
 }
 
-// export async function getUser(user: UserRecord, cached = false): Promise<UserRecord | null> {
-//   console.log('Fetching user');
-
 export async function getUser(user: UserRecord, cached = false): Promise<UserRecord | null> {
     console.log('Fetching user');
   // FOR BWBP
