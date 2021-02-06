@@ -29,6 +29,7 @@ import {
 
 import { Row } from './interface';
 import axios from 'axios';
+import { Alert } from 'react-native';
 
 /* Messages */
 
@@ -69,9 +70,11 @@ export async function findContact(senderRef: string): Promise<ContactRecord> {
   return { ...contact, image };
 }
 
-export async function getUser(user: UserRecord, cached = false): Promise<UserRecord | null> {
-  console.log('Fetching user');
+// export async function getUser(user: UserRecord, cached = false): Promise<UserRecord | null> {
+//   console.log('Fetching user');
 
+export async function getUser(user: UserRecord, cached = false): Promise<UserRecord | null> {
+    console.log('Fetching user');
   // FOR BWBP
   // NOTE: Please do not alter anything here or you may be disqualified.
   const testUser: UserRecord = {
